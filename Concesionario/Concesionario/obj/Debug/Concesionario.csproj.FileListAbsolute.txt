@@ -8,3 +8,13 @@ C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\Concesionario\Concesionario\obj\
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\Concesionario\Concesionario\obj\Debug\Concesionario.csproj.CoreCompileInputs.cache
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\Concesionario\Concesionario\obj\Debug\Concesionario.exe
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\Concesionario\Concesionario\obj\Debug\Concesionario.pdb
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\bin\Debug\Concesionario.exe.config
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\bin\Debug\Concesionario.exe
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\bin\Debug\Concesionario.pdb
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.csproj.AssemblyReference.cache
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.Form1.resources
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.Properties.Resources.resources
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.csproj.GenerateResource.cache
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.csproj.CoreCompileInputs.cache
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.exe
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\Concesionario\Concesionario\obj\Debug\Concesionario.pdb

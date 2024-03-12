@@ -190,5 +190,18 @@ namespace Concesionario
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Actualizar datos", "Actualizar", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            if (result == DialogResult.OK)
+            {
+                MessageBox.Show("Datos Actualizados", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+                MessageBox.Show("Se Cancelo Proceso de Actualizacion", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
