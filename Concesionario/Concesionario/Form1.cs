@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.Dynamic;
 
 namespace Concesionario
 {
@@ -48,8 +50,18 @@ namespace Concesionario
 
             }
             else {
-                MessageBox.Show("Datos Guardados Correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                if ("Auto guardado correctamente" == datos)
+                {
+                    MessageBox.Show(datos, "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                if ("No se pudo guardar el auto" == datos)
+                {
+                    MessageBox.Show(datos, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else {
+                    MessageBox.Show(datos, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
 
@@ -132,12 +144,32 @@ namespace Concesionario
 
             if (textBox.Text.Length > 6)
             {
-              
+
                 textBox.Text = textBox.Text.Substring(0, 6);
 
-               
+
                 textBox.SelectionStart = textBox.Text.Length;
                 MessageBox.Show("No se pueden superar los 6 Caracteres", "Preacusion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else 
+            
+            if(textBox.Text.Length == 6)
+            {
+
+                string resultadoAuto = ws.BuscarAuto(PlacaTxt.Text); //se tiene un json
+                List<dynamic> autos = JsonConvert.DeserializeObject<List<dynamic>>(resultadoAuto);
+                // Ahora puedes recorrer la lista de autos y acceder a sus propiedades dinámicamente
+                foreach (var auto in autos)
+                {
+                    
+                    MarcaTxt.Text = auto.Marca;
+                    ModeloTxt.Text = auto.Modelo;
+                    ColorTxt.Text = auto.Color;
+
+                    // Aquí puedes hacer lo que necesites con los datos del auto
+                }
+
+
             }
            
         }
@@ -214,6 +246,11 @@ namespace Concesionario
             else {
                 MessageBox.Show("Se Cancelo Proceso de Actualizacion", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

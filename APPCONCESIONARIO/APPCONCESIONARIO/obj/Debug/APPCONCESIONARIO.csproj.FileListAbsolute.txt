@@ -118,3 +118,5 @@ C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIO
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIONARIO\APPCONCESIONARIO\obj\Debug\APPCONCESIONARIO.pdb
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIONARIO\APPCONCESIONARIO\bin\MySql.Data.dll
 C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIONARIO\APPCONCESIONARIO\bin\MySql.Data.xml
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIONARIO\APPCONCESIONARIO\bin\Newtonsoft.Json.dll
+C:\Users\Luis Buelvas\Desktop\Proyecto_Final_PA\github\concesionario\APPCONCESIONARIO\APPCONCESIONARIO\bin\Newtonsoft.Json.xml

@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Text;
 using System.Web.Services;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using System.Dynamic;
 
 
 
@@ -20,7 +23,15 @@ namespace APPCONCESIONARIO
     public class WebService1 : System.Web.Services.WebService
     {
 
-        [WebMethod]
+        [WebMethod]// Metodo para crear la conexion 
+        private MySqlConnection Conexion()
+        {
+            string connectionString = "Server=localhost;Port=3306;Database=concesionario;Uid=root;Pwd='';";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            return connection;
+        }
+
+        [WebMethod]//metodo para crear la bd
         public string CrearBaseDatos()
         {
             string connectionString = "Server=localhost;Port=3306;Database=;Uid=root;Pwd=;";
@@ -55,14 +66,9 @@ namespace APPCONCESIONARIO
         }
 
 
-        [WebMethod]
-        private MySqlConnection Conexion() {
-            string connectionString = "Server=localhost;Port=3306;Database=concesionario;Uid=root;Pwd='';";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            return connection;
-        }
 
-        [WebMethod]
+
+        [WebMethod] // metodo para crear la tabla 
         public string CrearTable()
         {
             string mensaje;
@@ -84,9 +90,9 @@ namespace APPCONCESIONARIO
                     string queryCreate = "CREATE TABLE auto(placa VARCHAR(6) PRIMARY KEY, marca VARCHAR(15) NOT NULL,modelo INT NOT NULL, color VARCHAR(10) NOT NULL)";
                     MySqlCommand commandCreate = new MySqlCommand(queryCreate, conexion);
                     int rowsAffected = commandCreate.ExecuteNonQuery();
-                    
-                        mensaje = "Tabla 'auto' creada correctamente";
-                    
+
+                    mensaje = "Tabla 'auto' creada correctamente";
+
                 }
 
                 return mensaje;
@@ -103,6 +109,108 @@ namespace APPCONCESIONARIO
                 }
             }
         }
+
+        [WebMethod] //guardar datos 
+        public string SaveAuto(string placa, string marca, string modelo, string color) {
+            MySqlConnection conexion = Conexion();
+
+            try {
+                conexion.Open();
+
+                string query = "INSERT INTO auto (placa, marca, modelo, color) VALUES (@placa, @marca, @modelo, @color)";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@placa", placa);
+                command.Parameters.AddWithValue("@marca", marca);
+                command.Parameters.AddWithValue("@modelo", modelo);
+                command.Parameters.AddWithValue("@color", color);
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    return "Auto guardado correctamente";
+                }
+                else
+                {
+                    return "No se pudo guardar el auto";
+                }
+
+            } catch (MySqlException ex) {
+
+                return "ERROR: no se pudo conectar con la base de datos: " + ex.Message;
+
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                }
+            }
+        }
+
+
+
+        [WebMethod]
+        public string BuscarAuto(string criterioBusqueda)
+        {
+            MySqlConnection conexion = Conexion();
+            try
+            {
+                conexion.Open();
+                string query = "SELECT * FROM auto WHERE placa = @criterioBusqueda";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@criterioBusqueda", criterioBusqueda);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                // Verificar si se encontraron resultados
+                if (reader.HasRows)
+                {
+                    List<dynamic> autos = new List<dynamic>();
+                    while (reader.Read())
+                    {
+                        // Construye un objeto dinámico para representar los datos de la fila actual
+                        dynamic auto = new ExpandoObject();
+                        auto.Placa = reader["placa"].ToString();
+                        auto.Marca = reader["marca"].ToString();
+                        auto.Modelo = Convert.ToInt32(reader["modelo"]);
+                        auto.Color = reader["color"].ToString();
+
+                        // Agrega el objeto dinámico a la lista
+                        autos.Add(auto);
+                    }
+
+                    // Serializa la lista de objetos dinámicos a JSON
+                    string resultadoEnJson = JsonConvert.SerializeObject(autos);
+
+                    // Devuelve el JSON resultante
+                    return resultadoEnJson;
+
+
+                }
+                else {
+                    return "null";
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                return "ERROR: no se pudo conectar con la base de datos: " + ex.Message;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                }
+            }
+
+
+
+        }
+
+
 
         [WebMethod]
         public string HelloWorld()
@@ -136,8 +244,8 @@ namespace APPCONCESIONARIO
                 return "false";
             }
             else {
-
-               return "true";
+               string dato =  SaveAuto(placa, marca, modelo, color);
+               return dato;
                      }
 
 

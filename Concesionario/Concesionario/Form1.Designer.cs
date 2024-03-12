@@ -265,6 +265,7 @@ namespace Concesionario
             this.label13.Size = new System.Drawing.Size(624, 24);
             this.label13.TabIndex = 9;
             this.label13.Text = "A continuación registraremos un nuevo auto en la base de datos  ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 

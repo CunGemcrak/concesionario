@@ -15,6 +15,34 @@ namespace Concesionario.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.WebService1Soap")]
     public interface WebService1Soap {
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CrearBaseDatosResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CrearBaseDatos", ReplyAction="*")]
+        Concesionario.ServiceReference1.CrearBaseDatosResponse CrearBaseDatos(Concesionario.ServiceReference1.CrearBaseDatosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CrearBaseDatos", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearBaseDatosResponse> CrearBaseDatosAsync(Concesionario.ServiceReference1.CrearBaseDatosRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CrearTableResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CrearTable", ReplyAction="*")]
+        Concesionario.ServiceReference1.CrearTableResponse CrearTable(Concesionario.ServiceReference1.CrearTableRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CrearTable", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearTableResponse> CrearTableAsync(Concesionario.ServiceReference1.CrearTableRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento placa del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveAuto", ReplyAction="*")]
+        Concesionario.ServiceReference1.SaveAutoResponse SaveAuto(Concesionario.ServiceReference1.SaveAutoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SaveAuto", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.SaveAutoResponse> SaveAutoAsync(Concesionario.ServiceReference1.SaveAutoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento criterioBusqueda del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarAuto", ReplyAction="*")]
+        Concesionario.ServiceReference1.BuscarAutoResponse BuscarAuto(Concesionario.ServiceReference1.BuscarAutoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarAuto", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.BuscarAutoResponse> BuscarAutoAsync(Concesionario.ServiceReference1.BuscarAutoRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento HelloWorldResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
         Concesionario.ServiceReference1.HelloWorldResponse HelloWorld(Concesionario.ServiceReference1.HelloWorldRequest request);
@@ -35,6 +63,276 @@ namespace Concesionario.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Formulario", ReplyAction="*")]
         System.Threading.Tasks.Task<Concesionario.ServiceReference1.FormularioResponse> FormularioAsync(Concesionario.ServiceReference1.FormularioRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CrearBaseDatosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearBaseDatos", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.CrearBaseDatosRequestBody Body;
+        
+        public CrearBaseDatosRequest() {
+        }
+        
+        public CrearBaseDatosRequest(Concesionario.ServiceReference1.CrearBaseDatosRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class CrearBaseDatosRequestBody {
+        
+        public CrearBaseDatosRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CrearBaseDatosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearBaseDatosResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.CrearBaseDatosResponseBody Body;
+        
+        public CrearBaseDatosResponse() {
+        }
+        
+        public CrearBaseDatosResponse(Concesionario.ServiceReference1.CrearBaseDatosResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CrearBaseDatosResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string CrearBaseDatosResult;
+        
+        public CrearBaseDatosResponseBody() {
+        }
+        
+        public CrearBaseDatosResponseBody(string CrearBaseDatosResult) {
+            this.CrearBaseDatosResult = CrearBaseDatosResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CrearTableRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearTable", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.CrearTableRequestBody Body;
+        
+        public CrearTableRequest() {
+        }
+        
+        public CrearTableRequest(Concesionario.ServiceReference1.CrearTableRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class CrearTableRequestBody {
+        
+        public CrearTableRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CrearTableResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearTableResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.CrearTableResponseBody Body;
+        
+        public CrearTableResponse() {
+        }
+        
+        public CrearTableResponse(Concesionario.ServiceReference1.CrearTableResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CrearTableResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string CrearTableResult;
+        
+        public CrearTableResponseBody() {
+        }
+        
+        public CrearTableResponseBody(string CrearTableResult) {
+            this.CrearTableResult = CrearTableResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveAutoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveAuto", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.SaveAutoRequestBody Body;
+        
+        public SaveAutoRequest() {
+        }
+        
+        public SaveAutoRequest(Concesionario.ServiceReference1.SaveAutoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveAutoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string placa;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string marca;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string modelo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string color;
+        
+        public SaveAutoRequestBody() {
+        }
+        
+        public SaveAutoRequestBody(string placa, string marca, string modelo, string color) {
+            this.placa = placa;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveAutoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveAutoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.SaveAutoResponseBody Body;
+        
+        public SaveAutoResponse() {
+        }
+        
+        public SaveAutoResponse(Concesionario.ServiceReference1.SaveAutoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveAutoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string SaveAutoResult;
+        
+        public SaveAutoResponseBody() {
+        }
+        
+        public SaveAutoResponseBody(string SaveAutoResult) {
+            this.SaveAutoResult = SaveAutoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarAutoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarAuto", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.BuscarAutoRequestBody Body;
+        
+        public BuscarAutoRequest() {
+        }
+        
+        public BuscarAutoRequest(Concesionario.ServiceReference1.BuscarAutoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarAutoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string criterioBusqueda;
+        
+        public BuscarAutoRequestBody() {
+        }
+        
+        public BuscarAutoRequestBody(string criterioBusqueda) {
+            this.criterioBusqueda = criterioBusqueda;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class BuscarAutoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="BuscarAutoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.BuscarAutoResponseBody Body;
+        
+        public BuscarAutoResponse() {
+        }
+        
+        public BuscarAutoResponse(Concesionario.ServiceReference1.BuscarAutoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class BuscarAutoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string BuscarAutoResult;
+        
+        public BuscarAutoResponseBody() {
+        }
+        
+        public BuscarAutoResponseBody(string BuscarAutoResult) {
+            this.BuscarAutoResult = BuscarAutoResult;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -155,13 +453,13 @@ namespace Concesionario.ServiceReference1 {
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
     public partial class Validar_numeroResponseBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Validar_numeroResult;
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool Validar_numeroResult;
         
         public Validar_numeroResponseBody() {
         }
         
-        public Validar_numeroResponseBody(string Validar_numeroResult) {
+        public Validar_numeroResponseBody(bool Validar_numeroResult) {
             this.Validar_numeroResult = Validar_numeroResult;
         }
     }
@@ -274,6 +572,108 @@ namespace Concesionario.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.CrearBaseDatosResponse Concesionario.ServiceReference1.WebService1Soap.CrearBaseDatos(Concesionario.ServiceReference1.CrearBaseDatosRequest request) {
+            return base.Channel.CrearBaseDatos(request);
+        }
+        
+        public string CrearBaseDatos() {
+            Concesionario.ServiceReference1.CrearBaseDatosRequest inValue = new Concesionario.ServiceReference1.CrearBaseDatosRequest();
+            inValue.Body = new Concesionario.ServiceReference1.CrearBaseDatosRequestBody();
+            Concesionario.ServiceReference1.CrearBaseDatosResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).CrearBaseDatos(inValue);
+            return retVal.Body.CrearBaseDatosResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearBaseDatosResponse> Concesionario.ServiceReference1.WebService1Soap.CrearBaseDatosAsync(Concesionario.ServiceReference1.CrearBaseDatosRequest request) {
+            return base.Channel.CrearBaseDatosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearBaseDatosResponse> CrearBaseDatosAsync() {
+            Concesionario.ServiceReference1.CrearBaseDatosRequest inValue = new Concesionario.ServiceReference1.CrearBaseDatosRequest();
+            inValue.Body = new Concesionario.ServiceReference1.CrearBaseDatosRequestBody();
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).CrearBaseDatosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.CrearTableResponse Concesionario.ServiceReference1.WebService1Soap.CrearTable(Concesionario.ServiceReference1.CrearTableRequest request) {
+            return base.Channel.CrearTable(request);
+        }
+        
+        public string CrearTable() {
+            Concesionario.ServiceReference1.CrearTableRequest inValue = new Concesionario.ServiceReference1.CrearTableRequest();
+            inValue.Body = new Concesionario.ServiceReference1.CrearTableRequestBody();
+            Concesionario.ServiceReference1.CrearTableResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).CrearTable(inValue);
+            return retVal.Body.CrearTableResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearTableResponse> Concesionario.ServiceReference1.WebService1Soap.CrearTableAsync(Concesionario.ServiceReference1.CrearTableRequest request) {
+            return base.Channel.CrearTableAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.CrearTableResponse> CrearTableAsync() {
+            Concesionario.ServiceReference1.CrearTableRequest inValue = new Concesionario.ServiceReference1.CrearTableRequest();
+            inValue.Body = new Concesionario.ServiceReference1.CrearTableRequestBody();
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).CrearTableAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.SaveAutoResponse Concesionario.ServiceReference1.WebService1Soap.SaveAuto(Concesionario.ServiceReference1.SaveAutoRequest request) {
+            return base.Channel.SaveAuto(request);
+        }
+        
+        public string SaveAuto(string placa, string marca, string modelo, string color) {
+            Concesionario.ServiceReference1.SaveAutoRequest inValue = new Concesionario.ServiceReference1.SaveAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.SaveAutoRequestBody();
+            inValue.Body.placa = placa;
+            inValue.Body.marca = marca;
+            inValue.Body.modelo = modelo;
+            inValue.Body.color = color;
+            Concesionario.ServiceReference1.SaveAutoResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).SaveAuto(inValue);
+            return retVal.Body.SaveAutoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.SaveAutoResponse> Concesionario.ServiceReference1.WebService1Soap.SaveAutoAsync(Concesionario.ServiceReference1.SaveAutoRequest request) {
+            return base.Channel.SaveAutoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.SaveAutoResponse> SaveAutoAsync(string placa, string marca, string modelo, string color) {
+            Concesionario.ServiceReference1.SaveAutoRequest inValue = new Concesionario.ServiceReference1.SaveAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.SaveAutoRequestBody();
+            inValue.Body.placa = placa;
+            inValue.Body.marca = marca;
+            inValue.Body.modelo = modelo;
+            inValue.Body.color = color;
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).SaveAutoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.BuscarAutoResponse Concesionario.ServiceReference1.WebService1Soap.BuscarAuto(Concesionario.ServiceReference1.BuscarAutoRequest request) {
+            return base.Channel.BuscarAuto(request);
+        }
+        
+        public string BuscarAuto(string criterioBusqueda) {
+            Concesionario.ServiceReference1.BuscarAutoRequest inValue = new Concesionario.ServiceReference1.BuscarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.BuscarAutoRequestBody();
+            inValue.Body.criterioBusqueda = criterioBusqueda;
+            Concesionario.ServiceReference1.BuscarAutoResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).BuscarAuto(inValue);
+            return retVal.Body.BuscarAutoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.BuscarAutoResponse> Concesionario.ServiceReference1.WebService1Soap.BuscarAutoAsync(Concesionario.ServiceReference1.BuscarAutoRequest request) {
+            return base.Channel.BuscarAutoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.BuscarAutoResponse> BuscarAutoAsync(string criterioBusqueda) {
+            Concesionario.ServiceReference1.BuscarAutoRequest inValue = new Concesionario.ServiceReference1.BuscarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.BuscarAutoRequestBody();
+            inValue.Body.criterioBusqueda = criterioBusqueda;
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).BuscarAutoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Concesionario.ServiceReference1.HelloWorldResponse Concesionario.ServiceReference1.WebService1Soap.HelloWorld(Concesionario.ServiceReference1.HelloWorldRequest request) {
             return base.Channel.HelloWorld(request);
         }
@@ -301,7 +701,7 @@ namespace Concesionario.ServiceReference1 {
             return base.Channel.Validar_numero(request);
         }
         
-        public string Validar_numero(string texto) {
+        public bool Validar_numero(string texto) {
             Concesionario.ServiceReference1.Validar_numeroRequest inValue = new Concesionario.ServiceReference1.Validar_numeroRequest();
             inValue.Body = new Concesionario.ServiceReference1.Validar_numeroRequestBody();
             inValue.Body.texto = texto;
