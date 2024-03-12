@@ -197,7 +197,19 @@ namespace Concesionario
 
             if (result == DialogResult.OK)
             {
-                MessageBox.Show("Datos Actualizados", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string datos = ws.Formulario(
+                PlacaTxt.Text,
+                MarcaTxt.Text,
+                ModeloTxt.Text,
+                ColorTxt.Text).ToString();
+                if (datos == "true")
+                {
+
+                    MessageBox.Show("Datos Actualizados", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else {
+                    MessageBox.Show("No se encontro usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else {
                 MessageBox.Show("Se Cancelo Proceso de Actualizacion", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Information);
