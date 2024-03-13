@@ -43,6 +43,20 @@ namespace Concesionario.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BuscarAuto", ReplyAction="*")]
         System.Threading.Tasks.Task<Concesionario.ServiceReference1.BuscarAutoResponse> BuscarAutoAsync(Concesionario.ServiceReference1.BuscarAutoRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento placa del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ActualizarAuto", ReplyAction="*")]
+        Concesionario.ServiceReference1.ActualizarAutoResponse ActualizarAuto(Concesionario.ServiceReference1.ActualizarAutoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ActualizarAuto", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.ActualizarAutoResponse> ActualizarAutoAsync(Concesionario.ServiceReference1.ActualizarAutoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento placa del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarAuto", ReplyAction="*")]
+        Concesionario.ServiceReference1.EliminarAutoResponse EliminarAuto(Concesionario.ServiceReference1.EliminarAutoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EliminarAuto", ReplyAction="*")]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.EliminarAutoResponse> EliminarAutoAsync(Concesionario.ServiceReference1.EliminarAutoRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento HelloWorldResult del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
         Concesionario.ServiceReference1.HelloWorldResponse HelloWorld(Concesionario.ServiceReference1.HelloWorldRequest request);
@@ -332,6 +346,154 @@ namespace Concesionario.ServiceReference1 {
         
         public BuscarAutoResponseBody(string BuscarAutoResult) {
             this.BuscarAutoResult = BuscarAutoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActualizarAutoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActualizarAuto", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.ActualizarAutoRequestBody Body;
+        
+        public ActualizarAutoRequest() {
+        }
+        
+        public ActualizarAutoRequest(Concesionario.ServiceReference1.ActualizarAutoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ActualizarAutoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string placa;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string marca;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string modelo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string color;
+        
+        public ActualizarAutoRequestBody() {
+        }
+        
+        public ActualizarAutoRequestBody(string placa, string marca, string modelo, string color) {
+            this.placa = placa;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActualizarAutoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActualizarAutoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.ActualizarAutoResponseBody Body;
+        
+        public ActualizarAutoResponse() {
+        }
+        
+        public ActualizarAutoResponse(Concesionario.ServiceReference1.ActualizarAutoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ActualizarAutoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string ActualizarAutoResult;
+        
+        public ActualizarAutoResponseBody() {
+        }
+        
+        public ActualizarAutoResponseBody(string ActualizarAutoResult) {
+            this.ActualizarAutoResult = ActualizarAutoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarAutoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarAuto", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.EliminarAutoRequestBody Body;
+        
+        public EliminarAutoRequest() {
+        }
+        
+        public EliminarAutoRequest(Concesionario.ServiceReference1.EliminarAutoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class EliminarAutoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string placa;
+        
+        public EliminarAutoRequestBody() {
+        }
+        
+        public EliminarAutoRequestBody(string placa) {
+            this.placa = placa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class EliminarAutoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="EliminarAutoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Concesionario.ServiceReference1.EliminarAutoResponseBody Body;
+        
+        public EliminarAutoResponse() {
+        }
+        
+        public EliminarAutoResponse(Concesionario.ServiceReference1.EliminarAutoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class EliminarAutoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string EliminarAutoResult;
+        
+        public EliminarAutoResponseBody() {
+        }
+        
+        public EliminarAutoResponseBody(string EliminarAutoResult) {
+            this.EliminarAutoResult = EliminarAutoResult;
         }
     }
     
@@ -671,6 +833,62 @@ namespace Concesionario.ServiceReference1 {
             inValue.Body = new Concesionario.ServiceReference1.BuscarAutoRequestBody();
             inValue.Body.criterioBusqueda = criterioBusqueda;
             return ((Concesionario.ServiceReference1.WebService1Soap)(this)).BuscarAutoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.ActualizarAutoResponse Concesionario.ServiceReference1.WebService1Soap.ActualizarAuto(Concesionario.ServiceReference1.ActualizarAutoRequest request) {
+            return base.Channel.ActualizarAuto(request);
+        }
+        
+        public string ActualizarAuto(string placa, string marca, string modelo, string color) {
+            Concesionario.ServiceReference1.ActualizarAutoRequest inValue = new Concesionario.ServiceReference1.ActualizarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.ActualizarAutoRequestBody();
+            inValue.Body.placa = placa;
+            inValue.Body.marca = marca;
+            inValue.Body.modelo = modelo;
+            inValue.Body.color = color;
+            Concesionario.ServiceReference1.ActualizarAutoResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).ActualizarAuto(inValue);
+            return retVal.Body.ActualizarAutoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.ActualizarAutoResponse> Concesionario.ServiceReference1.WebService1Soap.ActualizarAutoAsync(Concesionario.ServiceReference1.ActualizarAutoRequest request) {
+            return base.Channel.ActualizarAutoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.ActualizarAutoResponse> ActualizarAutoAsync(string placa, string marca, string modelo, string color) {
+            Concesionario.ServiceReference1.ActualizarAutoRequest inValue = new Concesionario.ServiceReference1.ActualizarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.ActualizarAutoRequestBody();
+            inValue.Body.placa = placa;
+            inValue.Body.marca = marca;
+            inValue.Body.modelo = modelo;
+            inValue.Body.color = color;
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).ActualizarAutoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Concesionario.ServiceReference1.EliminarAutoResponse Concesionario.ServiceReference1.WebService1Soap.EliminarAuto(Concesionario.ServiceReference1.EliminarAutoRequest request) {
+            return base.Channel.EliminarAuto(request);
+        }
+        
+        public string EliminarAuto(string placa) {
+            Concesionario.ServiceReference1.EliminarAutoRequest inValue = new Concesionario.ServiceReference1.EliminarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.EliminarAutoRequestBody();
+            inValue.Body.placa = placa;
+            Concesionario.ServiceReference1.EliminarAutoResponse retVal = ((Concesionario.ServiceReference1.WebService1Soap)(this)).EliminarAuto(inValue);
+            return retVal.Body.EliminarAutoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Concesionario.ServiceReference1.EliminarAutoResponse> Concesionario.ServiceReference1.WebService1Soap.EliminarAutoAsync(Concesionario.ServiceReference1.EliminarAutoRequest request) {
+            return base.Channel.EliminarAutoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Concesionario.ServiceReference1.EliminarAutoResponse> EliminarAutoAsync(string placa) {
+            Concesionario.ServiceReference1.EliminarAutoRequest inValue = new Concesionario.ServiceReference1.EliminarAutoRequest();
+            inValue.Body = new Concesionario.ServiceReference1.EliminarAutoRequestBody();
+            inValue.Body.placa = placa;
+            return ((Concesionario.ServiceReference1.WebService1Soap)(this)).EliminarAutoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -41,7 +41,6 @@ namespace Concesionario
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label14 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,6 +55,10 @@ namespace Concesionario
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +78,10 @@ namespace Concesionario
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -96,7 +103,7 @@ namespace Concesionario
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label7.Location = new System.Drawing.Point(30, 223);
+            this.label7.Location = new System.Drawing.Point(24, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(216, 24);
             this.label7.TabIndex = 7;
@@ -107,7 +114,7 @@ namespace Concesionario
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(238, 111);
+            this.label6.Location = new System.Drawing.Point(438, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(211, 24);
             this.label6.TabIndex = 6;
@@ -118,7 +125,7 @@ namespace Concesionario
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(30, 269);
+            this.label5.Location = new System.Drawing.Point(24, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 24);
             this.label5.TabIndex = 5;
@@ -129,7 +136,7 @@ namespace Concesionario
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(30, 245);
+            this.label4.Location = new System.Drawing.Point(24, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 24);
             this.label4.TabIndex = 4;
@@ -140,7 +147,7 @@ namespace Concesionario
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(30, 199);
+            this.label3.Location = new System.Drawing.Point(24, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 24);
             this.label3.TabIndex = 3;
@@ -151,7 +158,7 @@ namespace Concesionario
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(20, 175);
+            this.label2.Location = new System.Drawing.Point(14, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 2;
@@ -173,7 +180,7 @@ namespace Concesionario
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 138);
+            this.pictureBox1.Location = new System.Drawing.Point(286, 127);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(411, 230);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +189,6 @@ namespace Concesionario
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button2);
@@ -205,15 +211,6 @@ namespace Concesionario
             this.tabPage2.Text = "Ingresar Auto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(527, 365);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "label14";
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(493, 300);
@@ -222,6 +219,7 @@ namespace Concesionario
             this.button4.TabIndex = 13;
             this.button4.Text = "Eiminar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -265,7 +263,6 @@ namespace Concesionario
             this.label13.Size = new System.Drawing.Size(624, 24);
             this.label13.TabIndex = 9;
             this.label13.Text = "A continuación registraremos un nuevo auto en la base de datos  ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
@@ -356,6 +353,54 @@ namespace Concesionario
             this.label8.TabIndex = 0;
             this.label8.Text = "Placa";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label14.Location = new System.Drawing.Point(24, 288);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(216, 24);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Programación Avanzada";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label15.Location = new System.Drawing.Point(24, 334);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 24);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Segundo #";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label16.Location = new System.Drawing.Point(24, 310);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 24);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Grupo: #####";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label17.Location = new System.Drawing.Point(24, 264);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(248, 24);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Agrega tu nomber y apellido";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +450,9 @@ namespace Concesionario
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }
 

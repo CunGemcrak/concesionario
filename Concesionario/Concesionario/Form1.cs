@@ -53,6 +53,7 @@ namespace Concesionario
                 if ("Auto guardado correctamente" == datos)
                 {
                     MessageBox.Show(datos, "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button2_Click(sender, e);
                 }
                 else
                 if ("No se pudo guardar el auto" == datos)
@@ -79,16 +80,13 @@ namespace Concesionario
             TextBox textBox = sender as TextBox;
             string textoNumerico = "";
 
-            if (textBox.Name == "ModeloTxt")
-            {
-                label14.Text = textBox.Text;
-            }
+           
 
 
 
             if (textBox.Text.Length > 4)
             {
-                // Mostrar un mensaje de advertencia
+               
                 
 
                 // Cortar el texto para que tenga solo 10 caracteres
@@ -136,11 +134,7 @@ namespace Concesionario
             TextBox textBox = sender as TextBox;
            
 
-            if (textBox.Name == "PlacaTxt")
-            {
-                label14.Text = textBox.Text;
-            }
-
+           
 
             if (textBox.Text.Length > 6)
             {
@@ -159,14 +153,17 @@ namespace Concesionario
                 string resultadoAuto = ws.BuscarAuto(PlacaTxt.Text); //se tiene un json
                 List<dynamic> autos = JsonConvert.DeserializeObject<List<dynamic>>(resultadoAuto);
                 // Ahora puedes recorrer la lista de autos y acceder a sus propiedades dinámicamente
-                foreach (var auto in autos)
+                if (autos != null)
                 {
-                    
-                    MarcaTxt.Text = auto.Marca;
-                    ModeloTxt.Text = auto.Modelo;
-                    ColorTxt.Text = auto.Color;
+                    foreach (var auto in autos)
+                    {
 
-                    // Aquí puedes hacer lo que necesites con los datos del auto
+                        MarcaTxt.Text = auto.Marca;
+                        ModeloTxt.Text = auto.Modelo;
+                        ColorTxt.Text = auto.Color;
+
+                        // Aquí puedes hacer lo que necesites con los datos del auto
+                    }
                 }
 
 
@@ -181,10 +178,7 @@ namespace Concesionario
             TextBox textBox = sender as TextBox;
 
 
-            if (textBox.Name == "MarcaTxt")
-            {
-                label14.Text = textBox.Text;
-            }
+           
 
 
             if (textBox.Text.Length > 15)
@@ -205,10 +199,7 @@ namespace Concesionario
             TextBox textBox = sender as TextBox;
 
 
-            if (textBox.Name == "ColorTxt")
-            {
-                label14.Text = textBox.Text;
-            }
+         
 
 
             if (textBox.Text.Length > 10)
@@ -229,18 +220,19 @@ namespace Concesionario
 
             if (result == DialogResult.OK)
             {
-                string datos = ws.Formulario(
+                string datos = ws.ActualizarAuto(
                 PlacaTxt.Text,
                 MarcaTxt.Text,
                 ModeloTxt.Text,
                 ColorTxt.Text).ToString();
-                if (datos == "true")
+                if (datos == "El auto se actualizó correctamente")
                 {
 
-                    MessageBox.Show("Datos Actualizados", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(datos, "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button2_Click(sender, e);
                 }
                 else {
-                    MessageBox.Show("No se encontro usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(datos, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else {
@@ -248,7 +240,32 @@ namespace Concesionario
             }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+       
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string datos = ws.EliminarAuto(PlacaTxt.Text);
+            MessageBox.Show(datos, "Elimnar Datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button2_Click(sender, e);
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }

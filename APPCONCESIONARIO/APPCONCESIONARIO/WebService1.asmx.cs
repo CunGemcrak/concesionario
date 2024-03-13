@@ -211,6 +211,88 @@ namespace APPCONCESIONARIO
         }
 
 
+        [WebMethod] // En este metodo actualizamos un usuario 
+        public string ActualizarAuto(string placa, string marca, string modelo, string color) 
+        {
+
+            MySqlConnection conexion = null;
+            try {
+
+                conexion = Conexion();
+                conexion.Open();
+                string query = "UPDATE auto SET marca = @marca, modelo = @modelo, color = @color WHERE placa = @placa";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@marca", marca);
+                command.Parameters.AddWithValue("@modelo", modelo);
+                command.Parameters.AddWithValue("@color", color);
+                command.Parameters.AddWithValue("@placa", placa);
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    return "El auto se actualizó correctamente";
+                }
+                else
+                {
+                    return "No se encontró el auto con la placa especificada";
+                }
+
+
+
+
+
+            }
+            catch (MySqlException ex) {
+                return "ERROR: No se puede actualizar los datos: " + ex.Message;
+
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                }
+            }
+
+
+
+
+        }
+
+        [WebMethod]
+        public string EliminarAuto(string placa) {
+            MySqlConnection conexion = null;
+            try {
+                conexion = Conexion();
+                conexion.Open();
+                string query = "DELETE FROM auto WHERE placa = @placa";
+                MySqlCommand command = new MySqlCommand(query, conexion);
+                command.Parameters.AddWithValue("@placa", placa);
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    return "El auto con la placa " + placa + " se eliminó correctamente";
+                }
+                else
+                {
+                    return "No se encontró ningún auto con la placa " + placa;
+                }
+
+            } catch (MySqlException ex) {
+                return "ERROR: No se pude eliminar el Auto: " + ex.Message;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Close();
+                }
+            }
+
+        }
+
+
 
         [WebMethod]
         public string HelloWorld()
